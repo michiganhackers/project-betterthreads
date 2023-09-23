@@ -15,7 +15,7 @@
       />
       <a href="/">Feed</a>
     </div>
-    <div class="post">
+    <div id="post">
       <h3>
         Michigan Hackers is the best club on campus!! Also join V1 it's pretty
         cool.
@@ -25,7 +25,19 @@
         src="https://michhackers.com/leadership/category-team-leads.jpg"
       />
       <p>This is a super cool paragraph</p>
-      <button>0 likes</button>
+      <form
+        onsubmit="
+          document.querySelector('#count').innerHTML = parseInt(document.querySelector('#count').innerHTML) + 1;
+          const newContent = document.createTextNode('Post liked!');
+          document.querySelector('#post').appendChild(newContent);
+          return false;
+        "
+      >
+        <button>
+          <p id="count">0</p>
+          likes
+        </button>
+      </form>
     </div>
   </body>
 </html>

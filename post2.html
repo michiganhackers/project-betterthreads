@@ -15,14 +15,26 @@
       />
       <a href="/">Feed</a>
     </div>
-    <div class="post">
+    <div id="post">
       <h3>Something else</h3>
       <img
         class="thumbnail"
         src="https://www.mlive.com/resizer/WAu0ADxWWaDuhbYjZ4JNn6gy228=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/V4LBRQTSEVBAXIV2AXTM5OKQRA.JPG"
       />
       <p>UMich is a cool university</p>
-      <button>0 likes</button>
+      <form
+        onsubmit="
+          document.querySelector('#count').innerHTML = parseInt(document.querySelector('#count').innerHTML) + 1;
+          const newContent = document.createTextNode('Post liked!');
+          document.querySelector('#post').appendChild(newContent);
+          return false;
+        "
+      >
+        <button>
+          <p id="count">0</p>
+          likes
+        </button>
+      </form>
     </div>
   </body>
 </html>

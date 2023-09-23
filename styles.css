@@ -20,7 +20,7 @@ body {
   width: 400px;
 }
 
-.post {
+#post {
   border: 2px solid black;
   border-radius: 8px;
   background: #ebefff;
