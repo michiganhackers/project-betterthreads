@@ -24,9 +24,7 @@
       <p>UMich is a cool university</p>
       <form
         onsubmit="
-          document.querySelector('#count').innerHTML = parseInt(document.querySelector('#count').innerHTML) + 1;
-          const newContent = document.createTextNode('Post liked!');
-          document.querySelector('#post').appendChild(newContent);
+          addLike()
           return false;
         "
       >
@@ -36,5 +34,13 @@
         </button>
       </form>
     </div>
+    <script type="text/javascript">
+      function addLike() {
+        document.querySelector('#count').innerHTML =
+          parseInt(document.querySelector('#count').innerHTML) + 1
+        const newContent = document.createTextNode('Post liked!')
+        document.querySelector('#post').appendChild(newContent)
+      }
+    </script>
   </body>
 </html>
