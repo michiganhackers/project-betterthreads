@@ -34,13 +34,13 @@
         />
       </li>
     </ul>
-    <form
-      onsubmit="
-          addPost()
-          return false;
-        "
-    >
-      <input type="text" id="input" />
+
+    <form onSubmit="
+      addPost()
+      return false;
+      "
+      >
+      <input type="text" id="input" value="hello"/>
       <button>New Post</button>
     </form>
 
@@ -48,10 +48,11 @@
       function addPost() {
         var text = document.getElementById('input').value
         var item = `<li><a>${text}</a></li>`
+
         document.getElementById('posts').innerHTML += item
-        document.getElementById('input').value = ''
-        alert('Your post has been created!')
+        document.getElementById('input').value = ""
       }
     </script>
+
   </body>
 </html>
