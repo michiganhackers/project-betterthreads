@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 * {
-  font-family: sans-serif;
+  font-family: 'Poppins';
 }
 
 body {
@@ -10,6 +12,9 @@ body {
 
 .logo {
   width: 100px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
 }
 
 #nav {
@@ -17,7 +22,7 @@ body {
 }
 
 #posts {
-  width: 400px;
+  width: calc(100vw - 100px);
 }
 
 #post {
@@ -28,8 +33,26 @@ body {
 
 .thumbnail {
   width: 100%;
+  margin-bottom: 24px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
 }
 
 a:hover {
   color: orange;
+}
+
+button {
+  /* margin: 48px;
+  padding: 72px;
+  border-width: 12px; */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+li {
+  position: relative;
 }
